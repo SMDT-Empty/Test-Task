@@ -79,6 +79,9 @@ input {
     line-height: 2.4rem;
     letter-spacing: 0.03em; }
   .btn--main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1.35rem 2.5rem;
     border-radius: 3rem;
     font-weight: 500;
