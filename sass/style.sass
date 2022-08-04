@@ -1,0 +1,246 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-family: 'Poppins', sans-serif
+    font-style: normal
+    font-size: 1.2vmin
+    background: var(--bg)
+a
+    text-decoration: none
+button
+    border: none
+    background: transparent
+    outline: none
+    cursor: pointer
+    width: fit-content
+input
+    border: none
+    outline: none
+    cursor: pointer
+    background: transparent
+.header
+    display: grid
+    align-items: center
+    position: absolute
+    top: 3.2rem
+    grid-template-columns: 30rem 1fr 30rem
+    width: 100%
+    img
+        margin-left: .5rem
+        width: 14.36rem
+    &__action
+        display: flex
+        align-items: center
+        justify-content: flex-end
+.container
+    position: relative
+    width: 100%
+    max-width: 122.9rem
+    margin: 0 auto
+.nav
+    display: flex
+    justify-content: center
+    gap: 5rem
+    margin-left: 5.8rem
+    &__item
+        position: relative
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 2.4rem
+        color: var(--link)
+        letter-spacing: 0.05em
+        &.active::before
+            position: absolute
+            bottom: -.4rem
+            left: 50%
+            width: 2.1rem
+            height: .2rem
+            transform: translateX(-50%)
+            content: ''
+            background: var(--orange)
+
+.btn
+    background: var(--action)
+    color: var(--white)
+    &--header
+        padding: 1.1rem 2.8rem
+        border-radius: 2rem
+        font-weight: 500
+        font-size: 1.65rem
+        line-height: 2.4rem
+        letter-spacing: 0.03em
+    &--main
+        padding: 1.35rem 2.5rem
+        border-radius: 3rem
+        font-weight: 500
+        font-size: 1.5rem
+        line-height: 2.2rem
+        letter-spacing: 0.1em
+    &--search
+        display: flex
+        align-items: center
+        justify-content: center
+        min-width: 5.9rem
+        height: 5.9rem
+        border-radius: 50%
+        margin: 0.3rem 0.4rem 0.3rem 0
+        img
+            width: 2.56rem
+            height: 2.56rem
+        &[disabled]
+            opacity: .5
+            cursor: no-drop
+
+.main
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    min-height: 100vh
+    margin-left: 0.8rem
+    &__span
+        font-weight: 500
+        font-size: 1.5rem
+        line-height: 2.6rem
+        color: var(--discrip)
+        margin-top: 1.6rem
+        margin-bottom: 3.75rem
+        letter-spacing: 0.05em
+        max-width: 44.5rem
+        overflow: hidden
+        display: block
+        -webkit-line-clamp: 5
+        display: -webkit-box
+        -webkit-box-orient: vertical
+        white-space: normal
+
+.inp
+    display: flex
+    align-items: center
+    background: var(--white)
+    border-radius: 10rem
+    max-width: 65.3rem
+    min-height: 6.2rem
+    max-height: 6.2rem
+    margin-top: 5.9rem
+    input
+        width: 100%
+        padding: 2.1rem 4rem
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 1.9rem
+        color: var(--plh)
+        letter-spacing: 0.057em
+        &::placeholder
+            font-weight: inherit
+            font-size: inherit
+            line-height: inherit
+            color: inherit
+            letter-spacing: inherit
+.users
+    display: flex
+    align-items: center
+    margin-top: 4.9rem
+    margin-bottom: 5.1rem
+    &__avatars
+        display: flex
+        img
+            border-radius: 100%
+            width: 3.8rem
+            height: 3.8rem
+            margin-right: -1.5rem
+            outline: .3rem solid var(--white)
+            position: relative
+        &-more
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 3.8rem
+            height: 3.8rem
+            outline: .3rem solid var(--white)
+            border-radius: 100%
+            background: var(--orange)
+            img
+                width: 1.9rem
+                height: 1.9rem
+                outline: none
+                margin-right: 0
+    &__span
+        margin-left: 1.2rem
+        font-weight: 400
+        font-size: 1.6rem
+        line-height: 1.9rem
+        color: var(--gray)
+        .price
+            color: var(--orange)
+
+.title
+    font-weight: 700
+    font-size: 4.8rem
+    line-height: 7.1rem
+    color: var(--title)
+    letter-spacing: 0.057em
+.orange
+    color: var(--orange)
+.grl
+    display: flex
+    align-items: center
+    justify-content: center
+    position: fixed
+    right: 20.3rem
+    bottom: 0
+    &-bg
+        height: 61.4rem
+    &__container
+        position: relative
+        &-orbit
+            right: -7.1vmin
+            position: absolute
+            width: 49.5rem
+            height: 49.5rem
+            top: -35.5rem
+            border-radius: 100%
+            border: 0.2rem solid var(--gray)
+            z-index: -1
+            animation: spinOrbin 5s linear infinite 3s
+
+            .sphere
+                position: absolute
+                top: 18.2rem
+                left: 18.2rem
+                width: 13rem
+                height: 13rem
+                display: flex
+                justify-content: center
+                align-content: center
+                animation: showSphere 2s ease forwards calc(1s * var(--b))
+                transform: rotate(calc(10deg * var(--i)))
+                &-img
+                    width: 13rem
+                    animation: bounce 5s ease infinite calc(1.5s * var(--b))
+                    transform-origin: center center
+
+@keyframes showSphere
+    0%
+        top: 18.2rem
+        left: 18.2rem
+    100%
+        transform-origin: 23.7rem 23.7rem
+        top: 0rem
+        left: 0rem
+
+@keyframes spinOrbin
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+@keyframes bounce
+    0%
+        transform: scale(1)
+    50%
+        transform: scale(.5)
+    100%
+        transform: scale(1)

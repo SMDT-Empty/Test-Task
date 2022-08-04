@@ -1,0 +1,23 @@
+<main class="main">
+    <h1 class="title">
+        Now Buy Your<br> PIN or <b class="orange">Top Up</b> </br> With Bank Transfer
+    </h1>
+    <span class="main__span">
+        Loading...
+    </span>
+    @@include('../button.html',{
+        'text': 'Get Started',
+        'type': 'main'
+    })
+    <div class="inp">
+        <input id="searchInput" placeholder="Where do you want to call?" type="text">
+        @@include('../button.html',{
+            'id': 'search',
+            'disabled': true,
+            'text': '<img src="./img/search.svg" alt="">',
+            'type': 'search'
+        })
+    </div>
+    @@include('avatar.html')
+</main>
+
