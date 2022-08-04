@@ -17,9 +17,75 @@
 
 <body>
     <div class="container">
-        @@include("./components/header/header.html")
-        @@include("./components/grl.html")
-        @@include("./components/body/body.html")
+        <header class="header">
+    <img src="./img/Logo.svg" alt="Global"/>
+    <nav class="nav">
+        <a class="nav__item active" href="@@href">Mobile Top Up</a>
+        <a class="nav__item @@class" href="@@href">About</a>
+        <a class="nav__item @@class" href="@@href">Rate</a>
+        <a class="nav__item @@class" href="@@href">Help</a>
+    </nav>
+    <div class="header__action">
+        <button
+    id="@@id"
+    class="btn btn--header"
+>Sign Up</button>
+    </div>
+</header>
+        <div class="grl">
+    <img class="grl-bg" src="./img/grl.png" alt="">
+    <div class="grl__container">
+        <div class="grl__container-orbit">
+
+            <div class="sphere" style="--b:0.4;--i:7.2;">
+                <img src="./img/sphere1.png" alt="sphere1" class="sphere-img">
+            </div>
+            <div class="sphere" style="--b:0.8;--i:14.4;margin-top: 4.7rem;">
+                <img src="./img/sphere2.png" alt="sphere2" class="sphere-img">
+            </div>
+            <div class="sphere" style="--b:1.2;--i:21.6;margin-top: 1rem;">
+                <img src="./img/sphere3.png" alt="sphere3" class="sphere-img">
+            </div>
+            <div class="sphere" style="--b:1.6;--i:28.8;">
+                <img src="./img/sphere2.png" alt="sphere4" class="sphere-img">
+            </div>
+            <div class="sphere" style="--b:2.0;--i:36;margin-top: 1rem;">
+                <img src="./img/sphere3.png" alt="sphere5" class="sphere-img">
+            </div>
+
+        </div>
+    </div>
+</div>
+        <main class="main">
+    <h1 class="title">
+        Now Buy Your<br> PIN or <b class="orange">Top Up</b> </br> With Bank Transfer
+    </h1>
+    <span class="main__span">
+        Loading...
+    </span>
+    <button
+    id="@@id"
+    class="btn btn--main"
+>Get Started</button>
+    <div class="inp">
+        <input id="searchInput" placeholder="Where do you want to call?" type="text">
+        <button
+    id="search"
+    class="btn btn--search"
+><img src="./img/search.svg" alt=""></button>
+    </div>
+    <div class="users">
+    <div class="users__avatars">
+        <img loading="lazy" src="https://picsum.photos/203" alt="avatar" style="z-index: 4">
+        <img loading="lazy" src="https://picsum.photos/202" alt="avatar" style="z-index: 3">
+        <img loading="lazy" src="https://picsum.photos/201" alt="avatar" style="z-index: 2">
+        <div class="users__avatars-more"><img src="./img/plus.svg" alt="more"></div>
+    </div>
+    <span class="users__span">45k+ Regular User.<a class="price" href=""> View Price Plan</a></span>
+</div>
+</main>
+
+
     </div>
 </body>
 <script src="./main.js"></script>
